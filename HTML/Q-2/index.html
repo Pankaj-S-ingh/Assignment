@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div class="cover">
+        
+        <!-- TITULO -->
+    
+        <h1 id="title">Customer Survey Form</h1>
+        <p id="description"><i>Thank you for taking the time to fill in this survey!</i></p>
+        
+    
+        <!-- FORMULARIO -->
+    
+        <form id="survey-form">
+    
+        <!-- Primer bloque: Información personal (Nombre, Email, Edad, Nivel de Español) -->
+    
+          <fieldset>
+               
+              
+            <label id="name-label" for="name">Name: 
+              <input  id="name"
+                      name="name"
+                      type="text" 
+                      placeholder=" Enter your name"
+                      required>
+            </label>
+    
+            <label id="email-label" for="email">Email: 
+              <input  id="email" 
+                      name="email"
+                      type="email" 
+                      placeholder=" Enter your Email"
+                      required>
+            </label>
+    
+          </fieldset>
+    
+    <!-- Segundo bloque: Profesor o estudiante -->
+          
+          <fieldset>
+            <legend>Is this first time you are using our services?</legend>
+            
+            <label id="yes-label" 
+                   for="yes">
+              <input id="yes" 
+                     name="yes-no"
+                     type="radio"
+                     value="yes"> Yes
+            </label>
+    
+            <label id="no-label" 
+                   for="no">
+              <input id="no" 
+                     name="yes-no"
+                     type="radio"
+                     value="no"> No
+            </label>
+
+
+            <legend>Would you suggestion to your friend?</legend>
+            <br>
+            <label id="1yes-label" 
+                   for="yes">
+              <input id="1yes" 
+                     name="yes-no1"
+                     type="radio"
+                     value="yes"> Yes
+            </label>
+    
+            <label id="1no-label" 
+                   for="no">
+              <input id="1no" 
+                     name="yes-no1"
+                     type="radio"
+                     value="no"> No
+            </label>
+
+
+            <legend>How satisfied you are ?</legend>
+            <br>
+            <label id="student-label" 
+                   for="student">
+              <input id="student" 
+                     name="student-teacher"
+                     type="radio"
+                     value="Stisfied"> Stisfied
+            </label>
+    
+            <label id="teacher-label" 
+                   for="teacher">
+              <input id="teacher" 
+                     name="student-teacher"
+                     type="radio"
+                     value="not_decided"> Not Decided
+            </label>
+            <label id="teacher-label" 
+            for="teacher">
+       <input id="teacher" 
+              name="student-teacher"
+              type="radio"
+              value="not_decided"> Not Satisfied
+     </label>
+
+
+            <label id="else-label" for="else">Any comments or suggestions?
+              <textarea id="else" 
+                        name="else" 
+                        rows="5" 
+                        cols="30">
+              </textarea>
+            </label>
+
+          </fieldset>
+          <input id="submit" type="submit" value="Submit" onclick="getFormValues()">
+        </form>
+        </div>
+      </body>
+    
+</body>
+<script>
+  function getFormValues() {
+      // Get values from the form
+      var nameValue = document.getElementById("name").value;
+      var emailValue = document.getElementById("email").value;
+  
+      alert("form submitted")
+
+  }
+</script>
+</html>
